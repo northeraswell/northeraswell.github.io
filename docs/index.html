@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norther</title>
+    <style>
+    @font-face {
+        font-family: 'EBGaramondExtraBold';
+        src: url('font.ttf') format('truetype');
+    }
+
+    body {
+        background-color: #fde6eb; 
+        color: #705d7a; 
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-container {
+        background-color: #f8d7da;
+        font-family: 'EBGaramondExtraBold', sans-serif;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .profile-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #705d7a; 
+    }
+
+    .profile-bio {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #705d7a;
+    }
+
+    .social-links a {
+        color: #e667af; 
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+    }
+
+    .terminal-container {
+        background-color: #f8d7da;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        text-align: left;
+        white-space: pre-line;
+        font-family: 'Courier New', monospace;
+        width: 111%;
+        height: 340px;
+        overflow: hidden;
+        font-size: 13px;
+    }
+
+    .gdb-command {
+        color: #e667af; 
+        font-weight: bold;
+    }
+
+    .assembly-address {
+        color: #d08ca8;
+    }
+
+    .assembly-instruction {
+        color: #bd93c9;
+    }
+
+    .loading-animation::after {
+        content: '|';
+        animation: blink 1s infinite step-start;
+        display: inline-block;
+        margin-left: 4px;
+        color: #e667af;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="profile-container">
+        <img class="profile-picture" src="Img/art.gif" alt="Profile Picture">
+        <div class="profile-name">Norther</div>
+        <div class="profile-bio">Compute Science Student - Web developer .</div>
+        <div class="social-links">
+            <a href="https://github.com/northeraswell" target="_blank">GitHub</a>
+            <a href="https://root-me.org/Norther" target="_blank">Root-Me</a>
+        </div>
+    </div>
+<div class="container">
+    <div class="terminal-container" id="terminal2">
+        <div><span class="gdb-command">GNU nano 7.2                       New Buffer</span></div>
+        <div><span class="gdb-command"><?php</span></div>    
+        <div><span class="gdb-command">session_start();</span></div>
+        <div><span class="assembly-address">$allowedRoles = ['admin', 'editor'];</span> <span class="assembly-instruction"></span></div>
+        <div><span class="assembly-address">$userRole =</span> <span class="assembly-instruction">$_SESSION['user_role'] ?? 'guest';</span></div>
+        <div><span class="assembly-address">if (!in_array($userRole, $allowedRoles)) {</span> <span class="assembly-instruction"></span></div>
+        <div><span class="assembly-address">header('Location: unauthorized.php');</span> <span class="assembly-instruction"></span></div>
+         <div><span class="assembly-address">exit();</span> <span class="assembly-instruction"></span></div>
+       <div><span class="assembly-address">}</span> <span class="assembly-instruction"></span></div>
+        <div><span class="assembly-address">?>
+        <div><span class="gdb-command"> <span class="loading-animation"></span></span></div>
+    </div>
+</div>
+</body>
+</html>
